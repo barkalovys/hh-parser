@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+form {}
+
+label {
+    display: block;
+}
+
+input, select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+ul {
+    max-width: 600px;
+}
+
+li > *:not(h4) {
+    margin-left: 20px;
+}
+
+.paginator {
+    position: relative;
+    width: 600px;
+}
+
+.paginator > a.prev {
+    position: absolute;
+    left:0;
+}
+
+.paginator > a.next {
+    position: absolute;
+    right:0;
+}

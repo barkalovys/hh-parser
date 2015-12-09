@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "cheerio" : "*",
+        "request" : "*",
+        "express": "*",
+        "jade":"*",
+        "body-parser":"*",
+        "querystring":"*"
+    }
+}

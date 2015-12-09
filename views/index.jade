@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        title=title
+        style
+            include ../public/css/main.css
+    body
+        .wrap
+            h1=title
+            p.
+                Парсер hh.ru<br>
+                Можно передавать GET параметры, например:<br>
+                ?sort_by=publication_time&job=node.js<br>
+                ?sort_by=salary_desc&job=javascript
+            form(action='/get_page')
+                label(for='job')='Название вакансии:'
+                input#job(type='text',value=job)
+                label(for='job')='Сортировать по:'
+                select#sort_by
+                    if(sort_by=='publication_time')
+                        option(value='publication_time' selected)='дате'
+                    else
+                        option(value='publication_time')='дате'
+                    if(sort_by=='salary_desc')
+                        option(value='salary_desc' selected)='зарплате'
+                    else
+                        option(value='salary_desc')='зарплате'
+                button(type='submit')='Искать'
+            #result
+script(src="/js/jquery.min.js")
+script(src="/js/main.js")

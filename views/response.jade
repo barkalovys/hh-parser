@@ -1,0 +1,16 @@
+h2=job
+h4='Запрос: '+query
+ul.vacancies
+    each v in vacancies
+        li.vacancy
+            h4=v.title
+            if v.salary
+                p=v.salary
+            if v.about
+                p=v.about
+if (total_pages > 1)
+    .paginator
+        if (current_page != 1)
+            a.prev(href='#', data-page=current_page-1, data-sort=sort_by)='назад'
+        if (current_page < total_pages)
+            a.next(href='#', data-page=current_page+1, data-sort=sort_by)='вперед'
